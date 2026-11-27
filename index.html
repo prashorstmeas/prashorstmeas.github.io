@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashorst (Eric) Meas — Data Scientist &amp; Bioinformatician</title>
+    <meta
+      name="description"
+      content="Portfolio of Prashorst (Eric) Meas — Melbourne-based Data Scientist and Bioinformatician affiliated with Monash University. Multi-omics longevity genomics, mechanistic modelling, 3D biological simulation, and humane AI software."
+    />
+    <meta property="og:title" content="Prashorst (Eric) Meas — Data Scientist & Bioinformatician" />
+    <meta
+      property="og:description"
+      content="Harnessing collective intelligence to decode life's programming language: DNA."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Prevent flash of wrong theme before paint
+      (function () {
+        try {
+          var saved = localStorage.getItem('pm-theme');
+          if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Prashorst Meas home">
+          <span class="brand-monogram" aria-hidden="true">PM</span>
+          <span class="brand-text">
+            <strong>Prashorst Meas</strong>
+            <small>Bioinformatics &amp; Data Science</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#research">Research</a>
+          <a href="#background">Background</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="icon-btn"
+            id="themeToggle"
+            aria-label="Toggle dark observatory mode"
+            title="Switch between Archival Paper and Observatory Dark theme"
+          >
+            <span class="theme-dot" aria-hidden="true"></span>
+            <span class="theme-label" id="themeLabel">Observatory</span>
+          </button>
+          <a
+            class="nav-cta"
+            href="https://github.com/prashorstmeas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              Melbourne, Australia · Monash University
+            </p>
+            <h1 class="hero-title">
+              Prashorst <span class="name-alias">(Eric)</span> Meas
+            </h1>
+            <blockquote class="hero-epigraph">
+              “Harnessing collective intelligence to decode life’s programming language: DNA.”
+            </blockquote>
+            <p class="hero-bio">
+              Data scientist and bioinformatician based in Melbourne, originally from Phnom Penh,
+              Cambodia. I build reproducible multi-omics models for human longevity, audit
+              mechanistic theories of ageing in silico, and craft interactive simulations and
+              local-first AI tools.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#work">
+                Explore Work <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/prashorstmeas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/prashorstmeas <span aria-hidden="true">↗</span>
+              </a>
+              <button
+                type="button"
+                class="btn btn-ghost copy-email-btn"
+                data-email="measprashorst@gmail.com"
+              >
+                <span class="copy-email-label">measprashorst@gmail.com</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE LONGEVITY MULTI-OMICS OBSERVATORY -->
+          <aside class="observatory-card" aria-label="Interactive longevity multi-omics candidate explorer">
+            <div class="observatory-header">
+              <div>
+                <span class="mono-kicker">LIVE RESEARCH EXPLORER</span>
+                <h2 class="observatory-title">Convergent Human Longevity Candidates</h2>
+              </div>
+              <button type="button" class="text-link-btn" id="openLongevityBtn">
+                Case study →
+              </button>
+            </div>
+
+            <div class="canvas-stage">
+              <canvas
+                id="convergenceCanvas"
+                width="540"
+                height="340"
+                role="img"
+                aria-label="Interactive scatter plot of top convergent novel human longevity gene candidates including RUNX2, FST, SLIT2, PIK3R2, PLPP3, THRB, SOCS3, and NCALD"
+              ></canvas>
+              <div class="canvas-hint" id="canvasHint">Hover or select a candidate gene</div>
+            </div>
+
+            <div class="gene-selector-strip" id="geneChips" role="group" aria-label="Featured candidate genes">
+              <!-- Populated by app.js -->
+            </div>
+
+            <div class="gene-readout" id="geneReadout" aria-live="polite">
+              <!-- Populated by app.js -->
+            </div>
+          </aside>
+        </div>
+
+        <!-- VERIFIED PROOF STRIP -->
+        <div class="container">
+          <dl class="proof-strip" aria-label="Selected research and engineering highlights">
+            <div class="proof-item">
+              <dt>Longevity Multi-Omics CV</dt>
+              <dd>0.77 <span>AUROC</span></dd>
+            </div>
+            <div class="proof-item">
+              <dt>In Silico Ageing Cohort</dt>
+              <dd>1,440 <span>organisms</span></dd>
+            </div>
+            <div class="proof-item">
+              <dt>LUCA Parity &amp; Ecology Suite</dt>
+              <dd>1,120+ <span>checks</span></dd>
+            </div>
+            <div class="proof-item">
+              <dt>Open Source &amp; Community</dt>
+              <dd>3b1b/manim <span>PR</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- SELECTED WORK SECTION -->
+      <section class="section work-section" id="work">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="mono-kicker">01 / SELECTED PORTFOLIO</p>
+              <h2 class="section-title">Research, Simulations &amp; Software</h2>
+            </div>
+            <p class="section-lead">
+              Six flagship projects spanning genome-wide longevity prioritisation, in silico survival
+              epidemiology, procedural 3D physiology, evolutionary strategy, and accessible AI.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="Filter projects by domain">
+            <button
+              type="button"
+              class="filter-pill is-active"
+              role="tab"
+              aria-selected="true"
+              data-filter="all"
+            >
+              All Work <span class="pill-count">6</span>
+            </button>
+            <button
+              type="button"
+              class="filter-pill"
+              role="tab"
+              aria-selected="false"
+              data-filter="biology"
+            >
+              Computational Biology <span class="pill-count">2</span>
+            </button>
+            <button
+              type="button"
+              class="filter-pill"
+              role="tab"
+              aria-selected="false"
+              data-filter="simulation"
+            >
+              Simulation &amp; 3D <span class="pill-count">2</span>
+            </button>
+            <button
+              type="button"
+              class="filter-pill"
+              role="tab"
+              aria-selected="false"
+              data-filter="ai"
+            >
+              AI &amp; Tools <span class="pill-count">2</span>
+            </button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Rendered dynamically from data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH DOMAINS & TECHNICAL STACK -->
+      <section class="section domains-section" id="research">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="mono-kicker">02 / RESEARCH &amp; CRAFT</p>
+              <h2 class="section-title">Domains of Inquiry</h2>
+            </div>
+            <p class="section-lead">
+              My work bridges rigorous statistical auditing with expressive computational tools —
+              insisting on reproducibility, clear uncertainty quantification, and human-centred design.
+            </p>
+          </div>
+
+          <div class="domains-grid" id="domainsGrid">
+            <!-- Rendered dynamically from data.js -->
+          </div>
+
+          <div class="stack-panel">
+            <div class="stack-panel-head">
+              <span class="mono-kicker">TECHNICAL TOOLKIT</span>
+              <p>Languages, statistical libraries, and simulation engines used across active repositories.</p>
+            </div>
+            <div class="stack-columns" id="stackColumns">
+              <!-- Rendered dynamically from data.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BACKGROUND & RECOGNITION -->
+      <section class="section background-section" id="background">
+        <div class="container background-grid">
+          <div class="background-intro">
+            <p class="mono-kicker">03 / BACKGROUND</p>
+            <h2 class="section-title">From Phnom Penh to Melbourne’s bioinformatics ecosystem</h2>
+            <p class="background-narrative">
+              Born in Phnom Penh, Cambodia, I began my quantitative foundation at CamEd Business
+              School before moving to Melbourne, Australia. After earning recognition as top
+              performing analytics project student at La Trobe University, I focused my career on
+              data science and bioinformatics at Monash University — combining statistical discipline,
+              open-source visualisation, and AI engineering to study ageing and living systems.
+            </p>
+            <div class="recognition-card">
+              <span class="mono-kicker">NOTABLE RECOGNITION</span>
+              <strong>Best Performing Student — BUS5PR1 (Analytics Project)</strong>
+              <p>La Trobe University · Analytics Celebration Night, 2019</p>
+            </div>
+          </div>
+
+          <ol class="timeline" id="timelineList">
+            <!-- Rendered dynamically from data.js -->
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <p class="mono-kicker">04 / COLLABORATE</p>
+            <h2 class="contact-title">
+              Open to bioinformatics research, longevity multi-omics collaborations, and scientific
+              software conversations.
+            </h2>
+            <p class="contact-sub">
+              Based in Melbourne, Victoria (AEDT / AEST). Reach out directly by email or explore my
+              open repositories on GitHub.
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:measprashorst@gmail.com">
+                Email measprashorst@gmail.com
+              </a>
+              <button
+                type="button"
+                class="btn btn-secondary copy-email-btn"
+                data-email="measprashorst@gmail.com"
+              >
+                <span class="copy-email-label">Copy Email Address</span>
+              </button>
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/prashorstmeas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub @prashorstmeas <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          <strong>Prashorst (Eric) Meas</strong> · Melbourne, Australia · Written in Australian
+          English.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/prashorstmeas" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:measprashorst@gmail.com">Email</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CASE STUDY MODAL -->
+    <div
+      class="modal-backdrop"
+      id="projectModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-topbar">
+          <span class="mono-kicker" id="modalCategory"></span>
+          <button
+            type="button"
+            class="modal-close"
+            id="modalCloseBtn"
+            aria-label="Close case study"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
